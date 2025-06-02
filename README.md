@@ -5,7 +5,7 @@
 > 
 > 疑难杂症，先上Issue；遇事不决，先看Wiki
 
-> [!TIP]
+> [!Important]
 > 
 > 此项目仍在构建，感谢各位支持🙏
 
@@ -21,3 +21,7 @@
 Powered by NoneBot
 
 Made by MacroSTAR Studio
+
+感谢每一位开发者的付出！
+
+贡献者：
