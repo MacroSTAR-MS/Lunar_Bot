@@ -1298,12 +1298,15 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                 await actions.custom.set_group_leave(group_id=event.group_id, is_dismiss=True)
             else:
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(CONFUSED_WORD.format(bot_name=bot_name))))
-        elif "撤回" == user_message:
+        elif "撤回" in user_message:
             if str(event.user_id) in ADMINS:
               if isinstance(event.message[0], Segments.Reply):
                 try:
-                  await actions.del_message(event.message[0].id)
+                    if user_message.split('撤回')[1]=='':
+                        await actions.del_message(event.message[0].id)
                 except:
+                    if len(user_message.split('撤回'))==1:
+                        await actions.del_message(event.message[0].id)
                     pass
             else:
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(CONFUSED_WORD.format(bot_name=bot_name))))
