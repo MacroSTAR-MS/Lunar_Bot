@@ -1,5 +1,6 @@
+# MacroSTAR studio
 from Tools.tools import * 
-print(title() + "\nWelcome to Jianer QQ Bot, Starting Kernal now...", end="\r") 
+print(title() + "\nWelcome to Lunar Bot, Starting Kernal now...", end="\r") 
 
 from Tools.GoogleAI import genai, Context, Parts, Roles, Schema
 from Tools.SearchOnline import network_gpt as SearchOnline
@@ -510,7 +511,7 @@ async def handler(event: Events.Event, actions: Listener.Actions) -> None:
 
         if "ping" == user_message:
             print(str(event.user_id))
-            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("{bot_name} 正在正常运行")))
+            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name} 正在正常运行")))
             
         elif f"{bot_name}真棒" in user_message and str(reminder) not in user_message:
             try:
@@ -922,29 +923,29 @@ if failed_plugins else "无"}'''
             if str(event.user_id) in ADMINS:
                 content = [
                     (f"{reminder}让我访问", "检索有权限的用户"), # Managers' help content 管理员帮助
-                    (f"{reminder}注销", "删除所有用户的上下文"),
-                    (f"{reminder}修改 (hh:mm) (内容)", "改变定时消息时间与内容"),
-                    (f"{reminder}感知", "查看运行状态"),
-                    (f"{reminder}休眠", f"奖励{bot_name}精致睡眠 💤"),
-                    (f"{reminder}重启", f"关闭所有线程和进程，关闭{bot_name}。然后重新启动{bot_name}。"),
-                    (f"{reminder}启用插件（插件名称）", "启用特定插件"),
-                    (f"{reminder}禁用插件（插件名称）", "忽略特定插件"),
-                    (f"{reminder}重载插件", "重新加载所有插件"),
-                    (f"{reminder}群发 (内容)", "在所有群聊中（黑名单群聊除外）发送一条消息"),
-                    (f"{reminder}冷静 (@QQ+时间)", "冷静用户一段时间"),
-                    (f"{reminder}取消冷静 (@QQ)", "解除用户冷静"),
-                    (f"{reminder}送飞机票 (@QQ)", "将用户移出群聊"),
-                    ("撤回【引用消息】", "撤回指定消息"),
-                    (f"{reminder}群发黑名单", "管理群发消息时不会发送到的群聊"),
-                    (f"{reminder}角色扮演", "管理角色预设"),
-                    (f"{reminder}更改TTS状态", "切换语音回复功能（默认启用）"),
+                    (f"{reminder}注销", "删除所有用户的上下文")
+                    (f"{reminder}修改 (hh:mm) (内容)", "改变定时消息时间与内容")
+                    (f"{reminder}感知", "查看运行状态")
+                    (f"{reminder}休眠", f"使{bot_name}暂停运行")
+                    (f"{reminder}重启", f"关闭所有线程和进程，关闭{bot_name}。然后重新启动{bot_name}。")
+                    (f"{reminder}启用插件（插件名称）", "启用特定插件")
+                    (f"{reminder}禁用插件（插件名称）", "忽略特定插件")
+                    (f"{reminder}重载插件", "重新加载所有插件")
+                    (f"{reminder}群发 (内容)", "在所有群聊中（黑名单群聊除外）发送一条消息")
+                    (f"{reminder}冷静 (@QQ+时间)", "冷静用户一段时间")
+                    (f"{reminder}取消冷静 (@QQ)", "解除用户冷静")
+                    (f"{reminder}送飞机票 (@QQ)", "将用户移出群聊")
+                    ("撤回【引用消息】", "撤回指定消息")
+                    (f"{reminder}群发黑名单", "管理群发消息时不会发送到的群聊")
+                    (f"{reminder}角色扮演", "管理角色预设")
+                    (f"{reminder}更改TTS状态", "切换语音回复功能（默认启用）")
                 ]
                 
                 if str(event.user_id) in SUPERS:
-                    content += [
-                        (f"{reminder}管理 M (QQ号)", "为用户添加 Manage_User 权限"),
-                        (f"{reminder}管理 S (QQ号)", "为用户添加 Super_User 权限"),
-                        (f"{reminder}删除管理 (QQ号)", "删除指定用户所有权限"),
+                    content +=  
+                        (f"{reminder}管理 M (QQ号)", "为用户添加 Manage_User 权限")
+                        (f"{reminder}管理 S (QQ号)", "为用户添加 Super_User 权限")
+                        (f"{reminder}删除管理 (QQ号)", "删除指定用户所有权限")
                         (f"{reminder}退出本群", "退出当前群聊")
                     ]
                     
@@ -986,16 +987,15 @@ if failed_plugins else "无"}'''
 版本：{version_name}
 由 Lagrange.OneBot 驱动
 基于 HypeR_bot 框架制作
+使用 Jianer_QQ_Bot
 ————————————————————
-第三方API
+第三方 API
 1. Mirokoi API
 2. Lolicon API
-2. LoliAPI API
-4. ChatGPT 3.5
-5. ChatGPT 4o-mini
-6. Google gemini-2.0
-7. GPT-SoVITS
-8. EdgeTTS
+3. LoliAPI API
+4. Google gemini-2.0
+5. GPT-SoVITS
+6. EdgeTTS
 ————————————————————
 © 2021~2025 宏星工作室 保留所有权利'''
 
@@ -1261,7 +1261,7 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                                 time114 = numbers[1]
                                 
                                 if str(userid114) == str(event.user_id):
-                                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"你TM神经病是不，要冷静找别的管理帮你")))
+                                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"你TM神经病是不，要冷静找别的群主帮你")))
                                     complete = None
                                 else:
                                     await actions.set_group_ban(group_id=event.group_id, user_id=userid114, duration=time114)
@@ -1375,7 +1375,10 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                         await actions.send(group_id=event.group_id,message=Manager.Message(Segments.Text("已设置！")))
                     else:
                         await actions.send(group_id=event.group_id,message=Manager.Message(Segments.Text("当前功能未开放,请联系管理员(Super_User 或者 Root_User)开放权限！")))
-        elif "😅" == user_message:
+        elif "😅" in user_message:
+                 await actions.send(group_id=event.group_id,message=Manager.Message(Segments.Image(os.path.abspath("./stcn6.jpg"))))
+                 await actions.set_group_ban(group_id=event.group_id,user_id=event.user_id,duration=600)
+        elif "6" == user_message:
                  await actions.send(group_id=event.group_id,message=Manager.Message(Segments.Image(os.path.abspath("./stcn6.jpg"))))
                  await actions.set_group_ban(group_id=event.group_id,user_id=event.user_id,duration=600)
         else:
