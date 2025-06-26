@@ -942,7 +942,7 @@ if failed_plugins else "无"}'''
                 ]
                 
                 if str(event.user_id) in SUPERS:
-                    content +=  
+                    content += [
                         (f"{reminder}管理 M (QQ号)", "为用户添加 Manage_User 权限")
                         (f"{reminder}管理 S (QQ号)", "为用户添加 Super_User 权限")
                         (f"{reminder}删除管理 (QQ号)", "删除指定用户所有权限")
