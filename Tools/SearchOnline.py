@@ -70,12 +70,12 @@ class network_gpt():
                 error_response = str(e)
                 if 'insufficient_user_quota' in error_response:
                     yield f'''无效的 API KEY 是因为 配额已用尽 。
-{self.bn}发生错误，不能回复你的消息了，请稍候再试吧 ε(┬┬﹏┬┬)3''', 'message'
+{self.bn}发生错误，不能回复你的消息了，请稍候再试吧''', 'message'
                 else:
                     raise 
                 
         except Exception as e:
             print(traceback.format_exc())
-            yield self.user_lists, f"{type(e)}\n{self.bn}发生错误，不能回复你的消息了，请稍候再试吧 ε(┬┬﹏┬┬)3", 'message'
+            yield self.user_lists, f"{type(e)}\n{self.bn}发生错误，不能回复你的消息了，请稍候再试吧", 'message'
 
         

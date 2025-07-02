@@ -1149,7 +1149,7 @@ class IntelliMarkets():
             w = MessageBox(f"即将更新插件：{p_name}", f'''若安装顺利，你的插件数据不会有任何丢失。''', self)
         if w.exec():
             plugin_installing = True
-            self.stateTooltip = StateToolTip('正在安装插件', '请耐心等待哦 (๑•̀ㅂ•́)و✧', self)
+            self.stateTooltip = StateToolTip('正在安装插件', '请耐心等待', self)
             self.stateTooltip.move(30, 30)
             self.stateTooltip.show()
             self.LoadingBar.setVisible(True)
@@ -1162,7 +1162,7 @@ class IntelliMarkets():
     @Slot(object)
     def finishied_install_plugin(self, r):
         print("安装完成")
-        self.stateTooltip.setContent('插件安装完成啦 (*≧ω≦)')
+        self.stateTooltip.setContent('插件安装完成')
         self.stateTooltip.setState(True)
         self.stateTooltip = None
         self.LoadingBar.setVisible(False)
@@ -1171,7 +1171,7 @@ class IntelliMarkets():
         w.exec()
         InfoBar.success(
                 title='刷新以显示',
-                content="请重新选择筛选条件以刷新插件中心 ~o( =∩ω∩= )m",
+                content="请重新选择筛选条件以刷新插件中心",
                 orient=Qt.Horizontal,
                 isClosable=True,   # enable close button
                 position=InfoBarPosition.BOTTOM_RIGHT,
@@ -1215,7 +1215,7 @@ class IntelliMarkets():
                     
                     with target_path.open("w", encoding='utf-8') as f:
                         f.write(content)
-                    return f"{plugin_name} 已成功安装到你的简儿中 o((>ω< ))o"
+                    return f"{plugin_name} 已成功安装到你的简儿中"
             
             # 检查是否是包格式插件
             setup_files = [
@@ -1228,16 +1228,16 @@ class IntelliMarkets():
                 if check_file_exists(self.repo, setup_file, "main"):
                     # target_dir = Path(PluginsManager.PLUGIN_FOLDER) / plugin_name
                     download_folder(self.repo, f"{plugin_name}/{plugin_name}", PluginsManager.PLUGIN_FOLDER, "main")
-                    return f"{plugin_name} 已成功安装到你的简儿中 o((>ω< ))o"
+                    return f"{plugin_name} 已成功安装到你的{bot_name}中"
             
             raise FileNotFoundError(f"远端不存在或未收录插件 {plugin_name}")
             
         except subprocess.CalledProcessError as e:
-            return f"安装过程中发生错误: \n依赖安装失败: {str(e)}\n\n插件未能完成安装 (っ °Д °;)っ"
+            return f"安装过程中发生错误: \n依赖安装失败: {str(e)}\n\n插件未能完成安装"
         except FileNotFoundError as e:
-            return f"安装过程中发生错误: \n找不到插件文件: {str(e)}\n\n插件未能完成安装 (っ °Д °;)っ"
+            return f"安装过程中发生错误: \n找不到插件文件: {str(e)}\n\n插件未能完成安装"
         except Exception as e:
-            error_msg = f"安装过程中发生错误: \n{str(e)}\n\n插件未能完成安装 (っ °Д °;)っ"
+            error_msg = f"安装过程中发生错误: \n{str(e)}\n\n插件未能完成安装"
             print(f"{error_msg}\n{traceback.format_exc()}") 
             return error_msg
 
@@ -1322,7 +1322,7 @@ class IntelliMarkets():
             finally:
                 InfoBar.success(
                     title='刷新以显示',
-                    content="请重新选择筛选条件以刷新插件中心 ~o( =∩ω∩= )m",
+                    content="请重新选择筛选条件以刷新插件中心",
                     orient=Qt.Horizontal,
                     isClosable=True,   # enable close button
                     position=InfoBarPosition.BOTTOM_RIGHT,
@@ -1451,7 +1451,7 @@ class IntelliMarkets():
                         
         InfoBar.error(
             title='无法设置插件',
-            content="找不到该插件文件 ヾ( ･`⌓´･)ﾉﾞ",
+            content="找不到该插件文件",
             orient=Qt.Horizontal,
             isClosable=True,   # enable close button
             position=InfoBarPosition.BOTTOM_RIGHT,

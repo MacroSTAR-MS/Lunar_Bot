@@ -269,7 +269,7 @@ async def execute_plugins(isAny: bool, **main_context) -> bool: # 接受 main.py
                     else:
                         raise ValueError(f'''插件 {plugin_module.__name__} 未提供参数 {param_name} ：
 无法在所有上下文中找到具有该标识符的变量且该标识符不具有默认值，这样的变量可能在定义前被使用或本就没有定义。
-如果您是开发者，请在 main.py 中提供此值。如果您是用户，请忽略此消息并通知管理员及时地修复。
+如果您是开发者，请在 main.py 中提供此值。如果您是用户，请忽略此消息并通知Root_User及时地修复。
 详见 https://github.com/SRInternet-Studio/Jianer_QQ_bot/wiki''')
 
                 response = await plugin_module.on_message(**kwargs)  # 传递 event 和动态参数
@@ -997,7 +997,7 @@ if failed_plugins else "无"}'''
 5. GPT-SoVITS
 6. EdgeTTS
 ————————————————————
-© 2021~2025 宏星工作室 保留所有权利'''
+© 2024~2025 宏星工作室 保留所有权利'''
 
             await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(about)))
 
@@ -1188,7 +1188,7 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                         with open("timing_message.ini", "w", encoding="utf-8") as f:
                             f.write(timing_settings)
                             f.close()
-                        r = f"{bot_name}设置成功！(*≧▽≦) "
+                        r = f"{bot_name}设置成功！ "
                         r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 将机器人的定时群发消息修改为时间：{tm[:5]} 
 内容：{tm[6::]}'''
                         await actions.send(user_id=ROOT_User[0], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
@@ -1220,15 +1220,15 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
         elif f"{reminder}生草" == user_message:
             await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("🌿")))
 
-        elif "zzzz...涩图...嘿嘿..." in user_message:
-            try:
-                order = "生图 ACG 随机"
-                local_vars = globals().copy()
-                local_vars.update(locals().copy())
-                if not await execute_plugins(False, **local_vars):
-                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
-            except:
-                await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
+#        elif "zzzz...涩图...嘿嘿..." in user_message:
+#            try:
+#                order = "生图 ACG 随机"
+#                local_vars = globals().copy()
+#                local_vars.update(locals().copy())
+#                if not await execute_plugins(False, **local_vars):
+#                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
+#            except:
+#                await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
                 
         elif "取消冷静 " in order:
            if str(event.user_id) in ADMINS:
