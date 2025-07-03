@@ -11,6 +11,16 @@
 - [x] 超级棒的Jianer插件兼容
 ----
 
+## 如何配置？
+
+[设置教程](https://github.com/MacroSTAR-Studio/Lunar_Bot/wiki)
+
+## 发现了问题？
+
+[提交Issue](https://github.com/MacroSTAR-Studio/Lunar_Bot/issues/new)
+
+---
+
 Powered by [Jianer](https://github.com/SRInternet-Studio/Jianer_QQ_bot)
 
 基于 思锐工作室 所制作的Jianer QQ Bot制作
