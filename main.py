@@ -923,29 +923,29 @@ if failed_plugins else "无"}'''
             if str(event.user_id) in ADMINS:
                 content = [
                     (f"{reminder}让我访问", "检索有权限的用户"), # Managers' help content 管理员帮助
-                    (f"{reminder}注销", "删除所有用户的上下文")
-                    (f"{reminder}修改 (hh:mm) (内容)", "改变定时消息时间与内容")
-                    (f"{reminder}感知", "查看运行状态")
-                    (f"{reminder}休眠", f"使{bot_name}暂停运行")
-                    (f"{reminder}重启", f"关闭所有线程和进程，关闭{bot_name}。然后重新启动{bot_name}。")
-                    (f"{reminder}启用插件（插件名称）", "启用特定插件")
-                    (f"{reminder}禁用插件（插件名称）", "忽略特定插件")
-                    (f"{reminder}重载插件", "重新加载所有插件")
-                    (f"{reminder}群发 (内容)", "在所有群聊中（黑名单群聊除外）发送一条消息")
-                    (f"{reminder}冷静 (@QQ+时间)", "冷静用户一段时间")
-                    (f"{reminder}取消冷静 (@QQ)", "解除用户冷静")
-                    (f"{reminder}送飞机票 (@QQ)", "将用户移出群聊")
-                    ("撤回【引用消息】", "撤回指定消息")
-                    (f"{reminder}群发黑名单", "管理群发消息时不会发送到的群聊")
-                    (f"{reminder}角色扮演", "管理角色预设")
+                    (f"{reminder}注销", "删除所有用户的上下文"),
+                    (f"{reminder}修改 (hh:mm) (内容)", "改变定时消息时间与内容"),
+                    (f"{reminder}感知", "查看运行状态"),
+                    (f"{reminder}休眠", f"使{bot_name}暂停运行"),
+                    (f"{reminder}重启", f"关闭所有线程和进程，关闭{bot_name}。然后重新启动{bot_name}。"),
+                    (f"{reminder}启用插件（插件名称）", "启用特定插件"),
+                    (f"{reminder}禁用插件（插件名称）", "忽略特定插件"),
+                    (f"{reminder}重载插件", "重新加载所有插件"),
+                    (f"{reminder}群发 (内容)", "在所有群聊中（黑名单群聊除外）发送一条消息"),
+                    (f"{reminder}冷静 (@QQ+时间)", "冷静用户一段时间"),
+                    (f"{reminder}取消冷静 (@QQ)", "解除用户冷静"),
+                    (f"{reminder}送飞机票 (@QQ)", "将用户移出群聊"),
+                    ("撤回【引用消息】", "撤回指定消息"),
+                    (f"{reminder}群发黑名单", "管理群发消息时不会发送到的群聊"),
+                    (f"{reminder}角色扮演", "管理角色预设"),
                     (f"{reminder}更改TTS状态", "切换语音回复功能（默认启用）")
                 ]
                 
                 if str(event.user_id) in SUPERS:
                     content += [
-                        (f"{reminder}管理 M (QQ号)", "为用户添加 Manage_User 权限")
-                        (f"{reminder}管理 S (QQ号)", "为用户添加 Super_User 权限")
-                        (f"{reminder}删除管理 (QQ号)", "删除指定用户所有权限")
+                        (f"{reminder}管理 M (QQ号)", "为用户添加 Manage_User 权限"),
+                        (f"{reminder}管理 S (QQ号)", "为用户添加 Super_User 权限"),
+                        (f"{reminder}删除管理 (QQ号)", "删除指定用户所有权限"),
                         (f"{reminder}退出本群", "退出当前群聊")
                     ]
                     
