@@ -35,7 +35,7 @@ bot_name_en = config.others["bot_name_en"]
 bot_owner = config.owner[0]
 ONE_SLOGAN: str = config.others["slogan"]
 CONFUSED_WORD: str = config.others.get("confused_words", 
-    "{bot_name}已拒绝你的访问}")
+    "{bot_name}已拒绝你的访问")
 
 ROOT_User: list = config.others["ROOT_User"]
 Super_User: list = []
@@ -653,19 +653,19 @@ async def handler(event: Events.Event, actions: Listener.Actions) -> None:
         elif "默认4" == order:
             EnableNetwork = "Net"
             print(f"sys: AI Mode change to ChatGPT-4")
-            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("嗯……我好像升级了！o((>ω< ))o")))
+            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("模型能力更高级，但需要注意API消耗")))
         elif "深度" == order:
             EnableNetwork = "Ds"
             print(f"sys: AI Mode change to DeepSeek")
-            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("服务器……繁忙？ε٩(๑> ₃ <)۶з")))
+            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("使用国内最先进的大模型回答")))
         elif "默认3.5" == order:
             EnableNetwork = "Normal"
             print(f"sys: AI Mode change to ChatGPT-3.5")
-            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("切换到大模型中运行ο(=•ω＜=)ρ⌒☆")))
+            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("使用普通模型回答")))
         elif "读图" == order:
             EnableNetwork = "Pixmap"
             print(f"sys: AI Mode change to Gemini")
-            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}打开了新视界！o(*≧▽≦)ツ")))
+            await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"可以识别图像并对话")))
 
         elif "列出黑名单" == order:
           if str(event.user_id) in ADMINS:
@@ -1160,7 +1160,11 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                     feel = feel + f"\nGPU {i} Usage：{usage * 100:.2f}%"
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(feel)))
             else:
-                await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(CONFUSED_WORD.format(bot_name=bot_name))))
+                confused_text = CONFUSED_WORD.replace('{bot_name}', str(bot_name))
+                await actions.send(
+                    group_id=event.group_id,
+                    message=Manager.Message([Segments.Text(confused_text)])
+                )
             
         elif f"{reminder}注销" in user_message:
             if str(event.user_id) in ADMINS:
