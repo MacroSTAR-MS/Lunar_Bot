@@ -9,6 +9,11 @@
 - [x] 原生支持 Gemini、ChatGPT、DeepSeek 模型
 - [x] 支持 上下文、预设 保存
 - [x] 超级棒的Jianer插件兼容
+- [x] ……您可以在部署完成后，@您的机器人查看功能，或者发送“{您设置的触发前缀}帮助”（无需带上{}）来查看管理权限
+----
+
+我们仍然在加速林浅月机器人的开发，但由于人力资源不足，开发进度较缓慢，我们一定会投入开发，给您一个最好的使用体验！
+
 ----
 
 ## 如何配置？
@@ -19,7 +24,13 @@
 
 [提交Issue](https://github.com/MacroSTAR-Studio/Lunar_Bot/issues/new)
 
----
+----
+
+### 您想体验原生林浅月 或 想跟开发在线聊？
+
+加入我们的[官方交流群](https://qm.qq.com/q/BLqAkTczUk)！
+
+----
 
 Powered by [Jianer](https://github.com/SRInternet-Studio/Jianer_QQ_bot)
 
