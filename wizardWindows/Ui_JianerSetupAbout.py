@@ -51,7 +51,7 @@ class Ui_Form(object):
         self.label = QtWidgets.QLabel(self.page)
         self.label.setMinimumSize(QtCore.QSize(64, 100))
         self.label.setMaximumSize(QtCore.QSize(128, 100))
-        self.label.setStyleSheet("image: url(:/png/Icon_rounded.png);")
+        self.label.setStyleSheet("image: url(:/Icon_rounded.png);")
         self.label.setText("")
         self.label.setObjectName("label")
         self.horizontalLayout_4.addWidget(self.label)

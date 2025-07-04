@@ -66,7 +66,7 @@ class Application(QApplication):
 class SetupWizard(SplitFluentWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("林浅月|Lunar - 设置向导")
+        self.setWindowTitle("林浅月 | Lunar - 设置向导")
         self.setWindowIcon(QIcon(os.path.abspath('.//wizardWindows/Icon_rounded.png')))
         self.resize(1000, 700)
         
@@ -1133,7 +1133,7 @@ class IntelliMarkets():
         if plugin_installing:
             InfoBar.warning(
                 title='请稍后再试',
-                content="当前有一个插件正在安装 _(:з」∠)_",
+                content="当前有一个插件正在安装",
                 orient=Qt.Horizontal,
                 isClosable=True,   # enable close button
                 position=InfoBarPosition.BOTTOM_RIGHT,
@@ -1144,7 +1144,7 @@ class IntelliMarkets():
         
         if not is_update:
             w = MessageBox(f"即将安装插件：{p_name}", f'''请确保您已详细阅读其介绍和开源协议，并清楚插件会对你的机器人造成的改变。
-简儿开发团队不对任何因插件造成的任何后果负责，如有问题，请第一时间联系插件开发人员。''', self)
+宏星工作室不对任何因插件造成的任何后果负责，如有问题，请第一时间联系插件开发人员。''', self)
         else:
             w = MessageBox(f"即将更新插件：{p_name}", f'''若安装顺利，你的插件数据不会有任何丢失。''', self)
         if w.exec():
@@ -1440,7 +1440,7 @@ class IntelliMarkets():
                     else:
                         InfoBar.success(
                             title='已设置插件',
-                            content=f"插件 {name} 已{'禁用' if disable else '启用'}成功 ⌯>ᴗo⌯ .ᐟ.ᐟ",
+                            content=f"插件 {name} 已{'禁用' if disable else '启用'}成功",
                             orient=Qt.Horizontal,
                             isClosable=True,   # enable close button
                             position=InfoBarPosition.BOTTOM_RIGHT,

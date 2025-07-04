@@ -5,7 +5,7 @@
 ### 功能
 
 > [!Important] 
-> AI功能需自行向 AI运营商 付费获得 API（你也可以自己找免费途径哦~）
+> AI功能需自行向 AI运营商 付费获得 API（你也可以自己找免费途径）
 - [x] 原生支持 Gemini、ChatGPT、DeepSeek 模型
 - [x] 支持 上下文、预设 保存
 - [x] 超级棒的Jianer插件兼容
