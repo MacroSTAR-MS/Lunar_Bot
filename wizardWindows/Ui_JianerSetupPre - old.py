@@ -210,7 +210,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "简儿 - 设置预设"))
+        Form.setWindowTitle(_translate("Form", "林浅月 - 设置预设"))
         self.LargeTitleLabel.setText(_translate("Form", "预设"))
         self.SubtitleLabel_5.setText(_translate("Form", "    AI聊天 需要提供预设。"))
         self.SubtitleLabel_6.setText(_translate("Form", "自动填充参数：以下内容将被在实际场景中被自动替换"))

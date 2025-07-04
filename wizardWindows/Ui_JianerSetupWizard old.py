@@ -351,9 +351,9 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "简儿 - 设置向导"))
-        self.LargeTitleLabel.setText(_translate("Form", "Ciallo～(∠・ω< )⌒★"))
-        self.SubtitleLabel_5.setText(_translate("Form", "    欢迎加入简儿的大家庭，简儿是你最忠实可爱的女朋友噢o(*≧▽≦)ツ"))
+        Form.setWindowTitle(_translate("Form", "林浅月|Lunar - 设置向导"))
+        self.LargeTitleLabel.setText(_translate("Form", "满天星光，终将汇聚宏伟星河！"))
+        self.SubtitleLabel_5.setText(_translate("Form", "    非常感谢您使用林浅月的 QQ机器人。"))
         self.TitleLabel_2.setText(_translate("Form", "Artificial Intelligence 设置"))
         self.SubtitleLabel_2.setText(_translate("Form", "配置 简儿 的 AI功能。"))
         self.TitleLabel.setText(_translate("Form", "基本信息设置"))

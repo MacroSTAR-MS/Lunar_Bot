@@ -289,7 +289,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "简儿 - 设置高级"))
+        Form.setWindowTitle(_translate("Form", "林浅月 - 高级设置"))
         self.LargeTitleLabel.setText(_translate("Form", "高级设置"))
         self.SubtitleLabel_5.setText(_translate("Form", "    主机地址、端口 和 QQ机器人协议等。"))
         self.TitleLabel_7.setText(_translate("Form", "主机端口 - 必填"))

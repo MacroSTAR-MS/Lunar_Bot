@@ -66,7 +66,7 @@ class Application(QApplication):
 class SetupWizard(SplitFluentWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("简儿 NEXT 3")
+        self.setWindowTitle("林浅月|Lunar - 设置向导")
         self.setWindowIcon(QIcon(os.path.abspath('.//wizardWindows/Icon_rounded.png')))
         self.resize(1000, 700)
         
@@ -144,11 +144,11 @@ class SetupWizard(SplitFluentWindow):
         self.jianer_setup_wizard.OtherIconButton.clicked.connect(lambda: self.switchTo(self.jianer_setup_others))
         
         # 定义 jianer_setup_about 中所有按钮的点击事件
-        self.jianer_setup_about.NormalIconButton.clicked.connect(lambda: webbrowser.open("https://qm.qq.com/q/fsVJtsZcA2"))
-        self.jianer_setup_about.NormalIconButton_2.clicked.connect(lambda: webbrowser.open("https://space.bilibili.com/1969160969"))
-        self.jianer_setup_about.NormalIconButton_3.clicked.connect(lambda: webbrowser.open("https://github.com/SRInternet-Studio/Jianer_QQ_bot/"))
-        self.jianer_setup_about.NormalIconButton_4.clicked.connect(lambda: webbrowser.open("https://github.com/SRInternet-Studio/Jianer_QQ_bot/issues/new?"))
-        self.jianer_setup_about.NormalIconButton_5.clicked.connect(lambda: webbrowser.open("https://www.sr-studio.cn/"))
+        self.jianer_setup_about.NormalIconButton.clicked.connect(lambda: webbrowser.open("https://qm.qq.com/q/4mV1z49uHS"))
+        self.jianer_setup_about.NormalIconButton_2.clicked.connect(lambda: webbrowser.open("https://space.bilibili.com/1407673587"))
+        self.jianer_setup_about.NormalIconButton_3.clicked.connect(lambda: webbrowser.open("https://github.com/MacroSTAR-Studio/Lunar_Bot/"))
+        self.jianer_setup_about.NormalIconButton_4.clicked.connect(lambda: webbrowser.open("https://github.com/MacroSTAR-Studio/Lunar_Bot/issues/new"))
+        self.jianer_setup_about.NormalIconButton_5.clicked.connect(lambda: webbrowser.open("https://msst.rth1.xyz/"))
         
         # 定义 jianer_setup_plugins 中的按钮
         self.jianer_setup_plugins.SearchButton.setIcon(FluentIcon.SEARCH)
@@ -473,7 +473,7 @@ class SetupWizard(SplitFluentWindow):
             config_text = f'''——————QQ机器人 配置设置——————
     {config_content}'''
             
-            presets_text = f'''——————AI预设 配置设置——————
+            presets_text = f'''——————对话预设 配置设置——————
     {presets_content}'''
             
             app_settings_text = f'''——————框架设置——————
@@ -1290,7 +1290,7 @@ class IntelliMarkets():
                 raise
                 
     def remove_plugin(self, p_name):
-        w = MessageBox(f"即将删除插件：{p_name}", f'''在你最终做好决策之前，请不要点击确认按钮，否则该插件及其数据将会被立即删除。''', self)
+        w = MessageBox(f"即将删除插件：{p_name}", f'''在您最终做好决策之前，请不要点击确认按钮，否则该插件及其数据将会被立即删除。''', self)
         if w.exec():
             try:
                 base_path = os.path.abspath(os.path.join(PluginsManager.PLUGIN_FOLDER, p_name))

@@ -328,20 +328,20 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "简儿 - 关于"))
+        Form.setWindowTitle(_translate("Form", "林浅月 - 关于"))
         self.LargeTitleLabel.setText(_translate("Form", "关于"))
-        self.TitleLabel.setText(_translate("Form", "简儿 NEXT 3"))
+        self.TitleLabel.setText(_translate("Form", "林浅月|Lunar QQ Bot"))
         self.SubtitleLabel.setText(_translate("Form", "OneBot v11，群管，AI，娱乐，新一代QQ群机器人。"))
         self.SubtitleLabel_2.setText(_translate("Form", "Version 3.0.0.0 - Release"))
         self.TitleLabel_3.setText(_translate("Form", "哔哩哔哩 Bilibili"))
         self.SubtitleLabel_4.setText(_translate("Form", "这里有我们的最新动态。"))
         self.TitleLabel_5.setText(_translate("Form", "Github 反馈页面"))
-        self.SubtitleLabel_6.setText(_translate("Form", "遇到了bug (＃°Д°) ？！快点击这里告诉我们的开发者"))
-        self.TitleLabel_2.setText(_translate("Form", "体验原生简儿"))
-        self.SubtitleLabel_3.setText(_translate("Form", "点此加入我们的官方QQ群 983497968 体验原生简儿。"))
+        self.SubtitleLabel_6.setText(_translate("Form", "遇到了BUG？！快点击这里告诉我们的开发者"))
+        self.TitleLabel_2.setText(_translate("Form", "体验原生林浅月"))
+        self.SubtitleLabel_3.setText(_translate("Form", "点此加入我们的官方QQ群 1049497025 体验原生林浅月。"))
         self.TitleLabel_4.setText(_translate("Form", "Github 开源页面"))
-        self.SubtitleLabel_5.setText(_translate("Form", "简儿 3.0.0.0 是开源项目，她被协议 GPLv3 所保护。"))
-        self.TitleLabel_6.setText(_translate("Form", "版权所有 © 2025 思锐工作室"))
-        self.SubtitleLabel_7.setText(_translate("Form", "请在QQ群中输入输入 /关于 来查看更详细的关于信息。"))
+        self.SubtitleLabel_5.setText(_translate("Form", "简儿 3.0.0.0 是开源项目，本被协议 GPLv3 所保护。"))
+        self.TitleLabel_6.setText(_translate("Form", "© 2025 宏星工作室"))
+        self.SubtitleLabel_7.setText(_translate("Form", "请在QQ群中输入输入 ；关于 来查看更详细的关于信息。"))
 from qfluentwidgets import ElevatedCardWidget, IconWidget, LargeTitleLabel, PopUpAniStackedWidget, SmoothScrollArea, SubtitleLabel, TitleLabel, FluentIcon
 from wizardWindows import JianerSetupWizard_rc
