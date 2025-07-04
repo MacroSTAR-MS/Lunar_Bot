@@ -5,10 +5,11 @@
 ### 功能
 
 > [!Important] 
-> AI功能需自行向 AI运营商 付费获得 API（你也可以自己找免费途径）
+> AI功能需自行向 AI运营商 付费获得 API（你也可以自己寻找免费途径）
 - [x] 原生支持 Gemini、ChatGPT、DeepSeek 模型
 - [x] 支持 上下文、预设 保存
-- [x] 超级棒的Jianer插件兼容
+- [x] Jianer插件兼容
+- [x] 简儿有的都该有吧
 - [x] ……您可以在部署完成后，@您的机器人查看功能，或者发送“{您设置的触发前缀}帮助”（无需带上{}）来查看管理权限
 ----
 
@@ -36,6 +37,6 @@ Powered by [Jianer](https://github.com/SRInternet-Studio/Jianer_QQ_bot)
 
 基于 思锐工作室 所制作的Jianer QQ Bot制作
 
-Made by #MacroSTAR Studio
+Made by **MacroSTAR Studio**
 
 感谢每一位开发者的付出！
