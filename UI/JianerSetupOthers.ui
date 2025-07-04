@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>简儿 - 设置基本信息</string>
+   <string>林浅月 - 设置基本信息</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -219,7 +219,7 @@
                      </font>
                     </property>
                     <property name="text">
-                     <string>简儿真棒</string>
+                     <string>林浅月真棒</string>
                     </property>
                    </widget>
                   </item>
@@ -776,3 +776,4 @@
  </resources>
  <connections/>
 </ui>
+<!-- This file is part of the Lunar Bot project. -->

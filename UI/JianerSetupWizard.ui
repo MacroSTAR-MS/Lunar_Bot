@@ -17,7 +17,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>简儿 - 设置向导</string>
+   <string>林浅月 - 设置向导</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -59,7 +59,7 @@
              </font>
             </property>
             <property name="text">
-             <string>Ciallo～(∠・ω&lt; )⌒★</string>
+             <string>欢迎使用 林浅月</string>
             </property>
            </widget>
           </item>
@@ -76,7 +76,7 @@
           </font>
          </property>
          <property name="text">
-          <string>    欢迎加入简儿的大家庭，简儿是你最忠实可爱的女朋友噢o(*≧▽≦)ツ</string>
+          <string>    满天星光，终将汇聚宏伟星河！</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -524,7 +524,7 @@
                      </font>
                     </property>
                     <property name="text">
-                     <string>配置 简儿 的 AI功能。</string>
+                     <string>配置 林浅月 的 AI功能。</string>
                     </property>
                     <property name="textFormat">
                      <enum>Qt::AutoText</enum>
@@ -950,7 +950,7 @@
                      </font>
                     </property>
                     <property name="text">
-                     <string>拓宽边界，为你的简儿增添无限可能。</string>
+                     <string>拓宽边界，为你的林浅月增添无限可能。</string>
                     </property>
                     <property name="textFormat">
                      <enum>Qt::AutoText</enum>

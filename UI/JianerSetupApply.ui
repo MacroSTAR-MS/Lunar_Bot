@@ -17,7 +17,8 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>简儿 - 核对设置清单</string>
+   <string>林浅月
+    - 核对设置清单</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -138,7 +139,7 @@
              <item row="2" column="0">
               <widget class="PrimaryPushButton" name="PrimaryPushButton_2">
                <property name="text">
-                <string>      启动吧，我的简儿！</string>
+                <string>      启动您的机器人</string>
                </property>
               </widget>
              </item>
