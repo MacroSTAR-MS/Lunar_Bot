@@ -896,7 +896,7 @@ class GenerateSettings():
             f.close()
 
     def config(self, uin: list = None, host: str = "127.0.0.1", port: int = 5004, gemini: str = "", openai: str = "", 
-           deepseek: str = "", botName: str = "简儿", botNameEN: str = "Jianer", ROOT_User: list = None, 
+           deepseek: str = "", botName: str = "林浅月", botNameEN: str = "Lunar", ROOT_User: list = None,
            Auto_approval: list = None, reminder: str = "/", Log_level: str = "INFO", black_list: list = None, slogan: str = "", 
            compliments: list = None, edge_settings: dict = None, poke_phrases: list = None, default_mode: str = "Ds") -> dict:
 
@@ -1418,7 +1418,7 @@ class IntelliMarkets():
                             path.rename(new_path)
                             InfoBar.success(
                                 title='已设置插件',
-                                content=f"插件 {name} 已{'启用' if disable else '禁用'}成功 ⌯>ᴗo⌯ .ᐟ.ᐟ",
+                                content=f"插件 {name} 已{'启用' if disable else '禁用'}成功",
                                 orient=Qt.Horizontal,
                                 isClosable=True,   # enable close button
                                 position=InfoBarPosition.BOTTOM_RIGHT,
