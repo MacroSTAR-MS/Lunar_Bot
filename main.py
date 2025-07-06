@@ -1224,30 +1224,7 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
         elif f"{reminder}生草" == user_message:
             await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("🌿")))
 
-#        elif "zzzz...涩图...嘿嘿..." in user_message:
-#            try:
-#                order = "生图 ACG 随机"
-#                local_vars = globals().copy()
-#                local_vars.update(locals().copy())
-#                if not await execute_plugins(False, **local_vars):
-#                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
-#            except:
-#                await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
-                
         elif "取消冷静 " in order:
-           if str(event.user_id) in ADMINS:
-            start_index = order.find("取消冷静 ")
-            if start_index != -1:
-                result = order[start_index + len("取消冷静 "):].strip()
-                numbers = re.findall(r'\d+', result)
-                for i in event.message:
-                    if isinstance(i, Segments.At):
-                        print("At in loading...")
-                        userid114 = numbers[0]  
-                        time114 = 0
-                        await actions.set_group_ban(group_id=event.group_id,user_id=userid114,duration=time114)
-     
-           else:
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(CONFUSED_WORD.format(bot_name=bot_name))))
                 
         elif "冷静" in order:
@@ -1379,12 +1356,7 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                         await actions.send(group_id=event.group_id,message=Manager.Message(Segments.Text("已设置！")))
                     else:
                         await actions.send(group_id=event.group_id,message=Manager.Message(Segments.Text("当前功能未开放,请联系管理员(Super_User 或者 Root_User)开放权限！")))
-        elif "😅" in user_message:
-                 await actions.send(group_id=event.group_id,message=Manager.Message(Segments.Image(os.path.abspath("./stcn6.jpg"))))
-                 await actions.set_group_ban(group_id=event.group_id,user_id=event.user_id,duration=600)
-        elif "6" == user_message:
-                 await actions.send(group_id=event.group_id,message=Manager.Message(Segments.Image(os.path.abspath("./stcn6.jpg"))))
-                 await actions.set_group_ban(group_id=event.group_id,user_id=event.user_id,duration=600)
+
         else:
             # 没有匹配到用户发送的任何关键字，进入二级响应
             # 1. 检查用户是否是想要切换预设
