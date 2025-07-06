@@ -1224,7 +1224,30 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
         elif f"{reminder}生草" == user_message:
             await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("🌿")))
 
+#        elif "zzzz...涩图...嘿嘿..." in user_message:
+#            try:
+#                order = "生图 ACG 随机"
+#                local_vars = globals().copy()
+#                local_vars.update(locals().copy())
+#                if not await execute_plugins(False, **local_vars):
+#                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
+#            except:
+#                await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
+                
         elif "取消冷静 " in order:
+           if str(event.user_id) in ADMINS:
+            start_index = order.find("取消冷静 ")
+            if start_index != -1:
+                result = order[start_index + len("取消冷静 "):].strip()
+                numbers = re.findall(r'\d+', result)
+                for i in event.message:
+                    if isinstance(i, Segments.At):
+                        print("At in loading...")
+                        userid114 = numbers[0]  
+                        time114 = 0
+                        await actions.set_group_ban(group_id=event.group_id,user_id=userid114,duration=time114)
+     
+           else:
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(CONFUSED_WORD.format(bot_name=bot_name))))
                 
         elif "冷静" in order:
