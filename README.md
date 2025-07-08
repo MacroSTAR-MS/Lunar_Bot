@@ -20,7 +20,7 @@
 
 ## 如何配置？
 
-[设置教程](https://github.com/MacroSTAR-Studio/Lunar_Bot/wiki)
+[设置教程](https://github.com/MacroSTAR-Studio/Lunar_Bot/wiki/%E8%AE%BE%E7%BD%AE%E6%95%99%E7%A8%8B))
 
 ## 发现了问题？
 
