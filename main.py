@@ -1192,7 +1192,7 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                         r = f"{bot_name}设置成功！ "
                         r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 将机器人的定时群发消息修改为时间：{tm[:5]} 
 内容：{tm[6::]}'''
-                        await actions.send(user_id=ROOT_User["ROOT_User"], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
+                        await actions.send(user_id=ROOT_User[0], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
                 except Exception as e:
                     r = f'''{str(type(e))}
 {bot_name}设置失败'''
@@ -1212,7 +1212,7 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                     word = " ".join(words)
                     r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 启动群发消息:
 “{word}”'''
-                    await actions.send(user_id=ROOT_User["ROOT_User"], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
+                    await actions.send(user_id=ROOT_User, message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
                     await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Reply(event.message_id), Segments.Text(f'''已启动群发消息 “{word}”''')))
                     await send_msg_all_groups(word, actions)
             else:
@@ -1276,14 +1276,14 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                     if isinstance(i, Segments.At):
                         await actions.set_group_kick(group_id=event.group_id,user_id=i.qq)
                         r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 使 {await get_user_nickname(i.qq, Manager, actions)} 退出了群聊：{event.group_id}'''
-                        await actions.send(user_id=ROOT_User["ROOT_User"], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
+                        await actions.send(user_id=ROOT_User, message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
           else:
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(CONFUSED_WORD.format(bot_name=bot_name))))  
         
         elif f"{reminder}退出本群" == user_message:
             if str(event.user_id) in SUPERS:
                 r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 使机器人退出了群聊：{event.group_id}'''
-                await actions.send(user_id=ROOT_User["ROOT_User"], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
+                await actions.send(user_id=ROOT_User, message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}已退出群聊，有问题")))
                 await asyncio.sleep(3)
                 await actions.custom.set_group_leave(group_id=event.group_id, is_dismiss=True)
