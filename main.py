@@ -965,14 +965,12 @@ if failed_plugins else "无"}'''
         elif (isinstance(event.message[0], Segments.At) and 
               int(event.message[0].qq) == event.self_id): 
 
-            if (all(isinstance(item, (Segments.At, Segments.Text)) for item in event.message) and 
+            if (all(isinstance(item, (Segments.At, Segments.Text)) for item in event.message) and
                 [str(s) for s in event.message if isinstance(s, Segments.Text) and not str(s).strip()]):
 
                 content = help_message()
             else:
-                content = f'''你要询问什么呢？
-和我聊天不需要@我
-直接在你想对{bot_name}想说的话前面加上 {reminder} 就行啦'''
+                content = f'''你要询问什么呢\n和我聊天不需要@我\n直接在你想对{bot_name}想说的话前面加上 {reminder} 就行啦'''
 
             await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Reply(event.message_id), Segments.Text(content)))
 
@@ -994,7 +992,7 @@ if failed_plugins else "无"}'''
 5. GPT-SoVITS
 6. EdgeTTS
 ————————————————————
-© 2024~2025 宏星工作室 保留所有权利'''
+© 2024~2025 宏星工作室 保留部分权利'''
 
             await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(about)))
 
