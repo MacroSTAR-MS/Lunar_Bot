@@ -1,6 +1,6 @@
 # MacroSTAR studio
 from Tools.tools import * 
-print(title() + "\nWelcome to Lunar Bot, Starting Kernal now...", end="\r") 
+print(title() + "\nWelcome to use Lunar Bot! Starting...", end="\r")
 
 from Tools.GoogleAI import genai, Context, Parts, Roles, Schema
 from Tools.SearchOnline import network_gpt as SearchOnline
@@ -442,9 +442,7 @@ async def handler(event: Events.Event, actions: Listener.Actions) -> None:
             return
         
         user = event.user_id
-        welcome = f''' 加入本群，希望你在这里玩得开心！
-        你可以通过 @{bot_name} 来知道{bot_name}可以干什么
-        在你想对{bot_name}想说的话前加上 {reminder} 即可'''
+        welcome = f''' 加入本群，希望你在这里玩得开心！\n你可以通过 @{bot_name} 来知道{bot_name}可以干什么\n在你想对{bot_name}想说的话前加上 {reminder} 即可\n开始聊天吧！'''
         await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Image(f"http://q2.qlogo.cn/headimg_dl?dst_uin={user}&spec=640"), Segments.Text("欢迎"), Segments.At(user), Segments.Text(welcome)))
         
     elif isinstance(event, Events.GroupMemberDecreaseEvent):
@@ -454,8 +452,7 @@ async def handler(event: Events.Event, actions: Listener.Actions) -> None:
         else:
             user_nick = "有人又"
 
-        text = f'''{event.user_id}离开了群聊
-        欢迎下↓次↑光↓临↑→～'''
+        text = f'''{event.user_id}离开了群聊\n欢迎下↓次↑光↓临↑→～'''
         print(f"group: {event.user_id} 已离开群聊 {event.group_id}")
         await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(text)))
 
@@ -1195,7 +1192,7 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                         r = f"{bot_name}设置成功！ "
                         r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 将机器人的定时群发消息修改为时间：{tm[:5]} 
 内容：{tm[6::]}'''
-                        await actions.send(user_id=ROOT_User[0], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
+                        await actions.send(user_id=ROOT_User["ROOT_User"], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
                 except Exception as e:
                     r = f'''{str(type(e))}
 {bot_name}设置失败'''
@@ -1208,32 +1205,22 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                 words = order.split(" ")
                 if len(words) < 2:
                     r = f'''群发格式错误
-                    举个例子：{reminder}群发 {bot_name}有更新新功能啦！ —> 在所有群聊中发送消息 “{bot_name}有更新新功能啦！”'''
+                    举个例子：{reminder}群发 {bot_name}更新新功能啦！ —> 在所有群聊中发送消息 “{bot_name}有更新新功能啦！”'''
                     await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Reply(event.message_id), Segments.Text(r)))
                 else:
                     words.pop(0)
                     word = " ".join(words)
                     r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 启动群发消息:
 “{word}”'''
-                    await actions.send(user_id=ROOT_User[0], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
+                    await actions.send(user_id=ROOT_User["ROOT_User"], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
                     await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Reply(event.message_id), Segments.Text(f'''已启动群发消息 “{word}”''')))
                     await send_msg_all_groups(word, actions)
             else:
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(CONFUSED_WORD.format(bot_name=bot_name))))
                 
-        elif f"{reminder}生草" == user_message:
+        elif f"生草" in user_message:
             await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text("🌿")))
 
-#        elif "zzzz...涩图...嘿嘿..." in user_message:
-#            try:
-#                order = "生图 ACG 随机"
-#                local_vars = globals().copy()
-#                local_vars.update(locals().copy())
-#                if not await execute_plugins(False, **local_vars):
-#                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
-#            except:
-#                await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}需要 GenerateFromACG 插件才能生成好看的涩图哦")))
-                
         elif "取消冷静 " in order:
            if str(event.user_id) in ADMINS:
             start_index = order.find("取消冷静 ")
@@ -1265,7 +1252,7 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                                 time114 = numbers[1]
                                 
                                 if str(userid114) == str(event.user_id):
-                                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"你TM神经病是不，要冷静找别的群主帮你")))
+                                    await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"无法冷静管理员(Manager)")))
                                     complete = None
                                 else:
                                     await actions.set_group_ban(group_id=event.group_id, user_id=userid114, duration=time114)
@@ -1289,15 +1276,15 @@ CPU占用：{str(system_info["cpu_usage"]) + "%"}
                     if isinstance(i, Segments.At):
                         await actions.set_group_kick(group_id=event.group_id,user_id=i.qq)
                         r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 使 {await get_user_nickname(i.qq, Manager, actions)} 退出了群聊：{event.group_id}'''
-                        await actions.send(user_id=ROOT_User[0], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
+                        await actions.send(user_id=ROOT_User["ROOT_User"], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
           else:
                 await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(CONFUSED_WORD.format(bot_name=bot_name))))  
         
         elif f"{reminder}退出本群" == user_message:
             if str(event.user_id) in SUPERS:
                 r_admin = f'''用户 {await get_user_nickname(event.user_id, Manager, actions)} 在 {event.time_str} 使机器人退出了群聊：{event.group_id}'''
-                await actions.send(user_id=ROOT_User[0], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
-                await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}期待与各位的下次见面")))
+                await actions.send(user_id=ROOT_User["ROOT_User"], message=Manager.Message(Segments.Text(r_admin))) #管理员操作通知ROOT用户
+                await actions.send(group_id=event.group_id, message=Manager.Message(Segments.Text(f"{bot_name}已退出群聊，有问题")))
                 await asyncio.sleep(3)
                 await actions.custom.set_group_leave(group_id=event.group_id, is_dismiss=True)
             else:
@@ -1600,12 +1587,12 @@ def help_message() -> str:
     return f'''如何与{bot_name}交流
     注：对话前必须加上 {reminder} 噢！~
        {reminder}(任意问题，必填) —> {bot_name}回复
-       {reminder}读图{"（当前）" if EnableNetwork == "Pixmap" else ""} —> {bot_name}可以回复您发送的图片✅
-       {reminder}默认4（当前不可用）{"（当前）" if EnableNetwork == "Net" else ""} —> {bot_name}更富有创造力的回复通道 🌟
-       {reminder}默认3.5（当前不可用）{"（当前）" if EnableNetwork == "Normal" else ""} —> {bot_name}的快速回复通道🎈
+       {reminder}读图{"（当前）" if EnableNetwork == "Pixmap" else ""} —> {bot_name}可以回复您发送的图片🖼️
+       {reminder}默认4{"（当前）" if EnableNetwork == "Net" else ""} —> {bot_name}更富有创造力的回复通道🌟
+       {reminder}默认3.5{"（当前）" if EnableNetwork == "Normal" else ""} —> {bot_name}的快速回复通道🎈
        {reminder}深度{"（当前）" if EnableNetwork == "Ds" else ""} —> 更加人性化和深度地回复问题✨{plugins_help}
-       {reminder}插件视角 —> 看看{bot_name}又收集了哪些好好用的工具🔮
+       {reminder}插件视角 —> 看看{bot_name}又添加了哪些好好用的工具🔮
        {reminder}角色扮演 —> {bot_name}切换不同的角色互动！
-若出现问题寻找开发者 2473768771'''
+若出现问题请带上报错信息发送Issue:https://github.com/MacroSTAR-Studio/Lunar_Bot/Issues/new'''
 
 Listener.run()
