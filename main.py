@@ -1591,6 +1591,7 @@ def help_message() -> str:
        {reminder}深度{"（当前）" if EnableNetwork == "Ds" else ""} —> 更加人性化和深度地回复问题✨{plugins_help}
        {reminder}插件视角 —> 看看{bot_name}又添加了哪些好好用的工具🔮
        {reminder}角色扮演 —> {bot_name}切换不同的角色互动！
-若出现问题请带上报错信息发送Issue:https://github.com/MacroSTAR-Studio/Lunar_Bot/Issues/new'''
+若出现问题请带上报错信息发送Issue:https://github.com/MacroSTAR-Studio/Lunar_Bot/Issues/new
+点击链接加入官方QQ群https://qm.qq.com/cgi-bin/qm/qr?k=UB0JwQj5IFGHuOKDlV8OkjCyNy8Ro-hd&jump_from=webapi&authKey=YeYY/Kfe231DQYf4fZsqJ6vPMfsZsTDKQ7qSY0El6li+VKSDXX4YOYEuKKStJJnH'''
 
 Listener.run()
