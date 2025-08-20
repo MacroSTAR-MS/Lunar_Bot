@@ -4,6 +4,8 @@
 
 >[!Caution]
 >Lagrange.OneBot请使用源码中附带的版本，不要使用Nightly Release中的版本
+>
+>本项目进入维护阶段，我们的开发精力将逐渐转移至Lunar X，本项目接下来的更新都是一些小修小补。
 
 ### 功能
 
