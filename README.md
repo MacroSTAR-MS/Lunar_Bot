@@ -2,6 +2,9 @@
 ### OneBot V11，群管，娱乐 - 全能 感知 个性 - 浅月，新一代QQ机器人
 ----
 
+>[!Caution]
+>Lagrange.OneBot请使用源码中附带的版本，不要使用Nightly Release中的版本
+
 ### 功能
 
 > [!Important] 
