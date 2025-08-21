@@ -7,7 +7,7 @@
 ![](https://img.shields.io/github/stars/MacroSTAR-MS/Lunar_Bot)
 ![](https://img.shields.io/github/release/MacroSTAR-MS/Lunar_Bot)
 ![](https://img.shields.io/github/issues/MacroSTAR-Studio/Lunar_Bot?color=F48D73)
-![](https://img.shields.io/github/license/MacroSTAR-MS/Lunar_Bot.svg1)
+![](https://img.shields.io/github/license/MacroSTAR-MS/Lunar_Bot.svg)
 
 ![](https://api.moedog.org/count/@MacroSTAR-MS.readme)
 
