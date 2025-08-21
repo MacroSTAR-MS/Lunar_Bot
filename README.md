@@ -1,5 +1,16 @@
-# Lunar_Bot
-### OneBot V11，群管，娱乐 - 全能 感知 个性 - 浅月，新一代QQ机器人
+<p align="center">
+  <h1 align="center">Lunar_Bot</h1>
+  <p align="center">OneBot V11，群管，娱乐 - 全能 感知 个性 - 浅月，新一代QQ机器人</p>
+</p>
+
+![](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=Python&logoColor=ffffff)
+![](https://img.shields.io/github/stars/MacroSTAR-MS/Lunar_Bot)
+![](https://img.shields.io/github/release/MacroSTAR-MS/Lunar_Bot)
+![](https://img.shields.io/github/issues/MacroSTAR-Studio/Lunar_Bot?color=F48D73)
+![](https://img.shields.io/github/license/MacroSTAR-MS/Lunar_Bot.svg1)
+
+![](https://api.moedog.org/count/@MacroSTAR-MS.readme)
+
 ----
 
 >[!Caution]
@@ -46,3 +57,7 @@ Powered by [Jianer](https://github.com/SRInternet-Studio/Jianer_QQ_bot)
 Made by **MacroSTAR Studio**
 
 感谢每一位开发者的付出！
+
+贡献开发者：
+
+![](https://contrib.rocks/image?repo=MacroSTAR-MS/Lunar_Bot)
