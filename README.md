@@ -16,9 +16,8 @@
 ----
 
 >[!Caution]
->Lagrange.OneBot请使用源码中附带的版本，不要使用Nightly Release中的版本
 >
->本项目进入维护阶段，我们的开发精力将逐渐转移至Lunar X，本项目接下来的更新都是一些小修小补。
+>Lunar Bot 3.0进入技术维护阶段，届时没有多的新功能增加，但是会发布一些修复Bug的安全更新，更多新内容请看Lunar X。
 
 ### 功能
 
@@ -38,7 +37,7 @@
 
 ## 如何配置？
 
-[设置教程](https://github.com/MacroSTAR-Studio/Lunar_Bot/wiki/%E8%AE%BE%E7%BD%AE%E6%95%99%E7%A8%8B)
+[设置教程](https://docs.macrostar.top/)
 
 ## 发现了问题？
 
@@ -57,6 +56,8 @@ Powered by [Jianer](https://github.com/SRInternet-Studio/Jianer_QQ_bot)
 基于 思锐工作室 所制作的Jianer QQ Bot制作
 
 Made by **MacroSTAR Studio**
+
+[文档](https://docs.macrostar.top/)内容来源于[Jianer QQ Bot的wiki](https://github.com/SRInternet-Studio/Jianer_QQ_Bot/wiki)
 
 感谢每一位开发者的付出！
 
