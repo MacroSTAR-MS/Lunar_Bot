@@ -19,6 +19,12 @@
 >
 >Lunar Bot 4.0 将在 2025年12月13日停止技术支持，2026年6月7日停止安全更新，我们将把所有开发精力放在Lunar X上，对您造成的不便我们深感歉意！
 
+>[!Caution]
+>
+>2026.01.10更新
+>
+>请注意⚠️，由于Lagrange官方已停止中央SignServer的运行，所以 仓库/Release 中的 Lagrange.OneBot 已不可用。我们推荐您换到NapCat协议进行使用，详情请见[Jianer_QQ_Bot的wiki文档](https://github.com/SRInterner-Studio/Jianer_QQ_Bot/wiki)中的「使用NapCat连接」。若您仍需使用Lagrange协议进行连接，请自行搭建/寻找第三方SignServer。
+
 ### 功能
 
 > [!Important] 
