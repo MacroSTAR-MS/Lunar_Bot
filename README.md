@@ -14,14 +14,14 @@
 </div>
 
 ----
-
->[!Caution]
->
+>[!Tip]
 >2026.02.16更新
 >
->请注意⚠️，由于Lagrange官方已停止中央SignServer的运行，所以 仓库/Release 中的 Lagrange.OneBot 已不可用。我们推荐您换到NapCat协议进行使用，详情请见[Jianer_QQ_Bot的wiki文档](https://github.com/SRInterner-Studio/Jianer_QQ_Bot/wiki)中的「使用NapCat连接」。若您仍需使用Lagrange协议进行连接，请自行搭建/寻找第三方SignServer。
->
 >因为Lunar X被不可抗力暂停开发，我们决定恢复对Lunar Bot的支持。
+
+>[!Warning]
+>
+>请注意⚠️，由于Lagrange官方已停止中央SignServer的运行，所以 仓库/Release 中的 Lagrange.OneBot 已不可用。我们推荐您换到NapCat协议进行使用，详情请见[Jianer_QQ_Bot的wiki文档](https://github.com/SRInterner-Studio/Jianer_QQ_Bot/wiki)中的「使用NapCat连接」。若您仍需使用Lagrange协议进行连接，请自行搭建/寻找第三方SignServer。
 
 ### 功能
 
