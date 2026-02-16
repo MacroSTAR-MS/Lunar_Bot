@@ -1,0 +1,28 @@
+[project]
+name = "lunar-bot"
+version = "3.0.1"
+description = "简洁、轻便的QQ机器人"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "asyncio",
+  "datetime",
+  "emoji",
+  "openai>=1.35.12",
+  "requests",
+  "aiohttp",
+  "psutil",
+  "gputil",
+  "pillow",
+  "google-generativeai==0.7.2",
+  "httpx",
+  "hyper-bot==0.78.2",
+  "flask",
+  "websocket-client",
+  "paramiko>=3.5.1",
+  "PySide6",
+  "PySide6-Fluent-Widgets",
+  "edge_tts",
+  "pyGithub",
+  "playwright",
+]
