@@ -1,0 +1,48 @@
+{
+    "owner": [
+        "2473768771"
+    ],
+    "black_list": [],
+    "silents": [],
+    "Connection": {
+        "mode": "FWS",
+        "host": "127.0.0.1",
+        "port": 3803,
+        "listener_host": "127.0.0.1",
+        "listener_port": 3803,
+        "retries": 5,
+        "satori_token": ""
+    },
+    "Log_level": "INFO",
+    "protocol": "OneBot",
+    "Others": {
+        "gemini_key": "AIzaSyCHxl37ngb2yDahz9PN5yrUq8MIX43nD_Q",
+        "openai_key": "",
+        "deepseek_key": "sk-191e3b6e0dec47dabdd0c5c0ed609425",
+        "default_mode": "Ds",
+        "bot_name": "林浅月",
+        "bot_name_en": "Lunar",
+        "ROOT_User": [
+            "2473768771"
+        ],
+        "Auto_approval": [
+            "Class Widgets",
+          "1049497025"
+        ],
+        "reminder": "！",
+        "slogan": "全能 感知 个性",
+        "TTS": {
+            "voiceColor": "zh-CN-XiaoyiNeural",
+            "rate": "+0%",
+            "volume": "+0%",
+            "pitch": "+0Hz"
+        },
+        "compliment": [
+            "感谢你的鼓励，可以给我主页点个赞吗，感谢支持"
+        ],
+        "poke_rejection_phrases": [
+            ""
+        ]
+    },
+    "uin": 0
+}
